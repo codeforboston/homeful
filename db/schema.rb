@@ -20,7 +20,6 @@ ActiveRecord::Schema.define(version: 20140531180323) do
   create_table "donations", force: true do |t|
     t.decimal  "amount"
     t.integer  "donor_id"
-    t.integer  "client_id"
     t.integer  "goal_id"
     t.datetime "created_at"
     t.datetime "updated_at"
@@ -45,6 +44,7 @@ ActiveRecord::Schema.define(version: 20140531180323) do
   create_table "updates", force: true do |t|
     t.text     "body"
     t.string   "title"
+    t.integer  "client_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
