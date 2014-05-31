@@ -10,6 +10,10 @@ class DonorsController < ApplicationController
   def create
   end
 
+  def edit
+    @donor = Donor.find params[:id]
+  end
+
   def update
     @donor = Donor.find params[:id]
     # TODO: Updating Donor

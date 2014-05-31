@@ -11,6 +11,10 @@ class PartnersController < ApplicationController
     # TODO: Create Partner
   end
 
+  def edit
+    @partner = Partner.find params[:id]
+  end
+
   def update
     @partner = Partner.find params[:id]
     # TODO: Update Partner

@@ -11,6 +11,10 @@ class ClientsController < ApplicationController
     # TODO: create Client
   end
 
+  def edit
+    @client = Client.find params[:id]
+  end
+
   def update
     @client = Client.find params[:id]
     # TODO: Updating Client
