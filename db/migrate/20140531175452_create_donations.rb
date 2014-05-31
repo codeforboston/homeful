@@ -4,7 +4,6 @@ class CreateDonations < ActiveRecord::Migration
       t.decimal :amount
 
       t.belongs_to :donor
-      t.belongs_to :client
       t.belongs_to :goal
 
       t.timestamps

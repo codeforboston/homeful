@@ -15,6 +15,39 @@ ActiveRecord::Schema.define(version: 20140531180323) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+  enable_extension "hstore"
+
+  create_table "donations", force: true do |t|
+    t.decimal  "amount"
+    t.integer  "donor_id"
+    t.integer  "goal_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "goals", force: true do |t|
+    t.string   "title"
+    t.decimal  "amount"
+    t.text     "description"
+    t.integer  "client_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "needs", force: true do |t|
+    t.string   "title"
+    t.integer  "client_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "updates", force: true do |t|
+    t.text     "body"
+    t.string   "title"
+    t.integer  "client_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "users", force: true do |t|
     t.string   "email",                  default: "", null: false
@@ -27,6 +60,7 @@ ActiveRecord::Schema.define(version: 20140531180323) do
     t.datetime "last_sign_in_at"
     t.string   "current_sign_in_ip"
     t.string   "last_sign_in_ip"
+    t.string   "type"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "full_name"
