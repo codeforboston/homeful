@@ -11,10 +11,33 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140531205928) do
+ActiveRecord::Schema.define(version: 20140531220815) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+  enable_extension "hstore"
+
+  create_table "clients", force: true do |t|
+    t.string   "email",                                          default: "", null: false
+    t.string   "encrypted_password",                             default: "", null: false
+    t.string   "reset_password_token"
+    t.datetime "reset_password_sent_at"
+    t.datetime "remember_created_at"
+    t.integer  "sign_in_count",                                  default: 0,  null: false
+    t.datetime "current_sign_in_at"
+    t.datetime "last_sign_in_at"
+    t.string   "current_sign_in_ip"
+    t.string   "last_sign_in_ip"
+    t.text     "bio"
+    t.string   "video"
+    t.decimal  "balance",                precision: 8, scale: 2
+    t.integer  "partner_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "clients", ["email"], name: "index_clients_on_email", unique: true, using: :btree
+  add_index "clients", ["reset_password_token"], name: "index_clients_on_reset_password_token", unique: true, using: :btree
 
   create_table "donations", force: true do |t|
     t.decimal  "amount"
@@ -23,6 +46,25 @@ ActiveRecord::Schema.define(version: 20140531205928) do
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  create_table "donors", force: true do |t|
+    t.string   "email",                                          default: "", null: false
+    t.string   "encrypted_password",                             default: "", null: false
+    t.string   "reset_password_token"
+    t.datetime "reset_password_sent_at"
+    t.datetime "remember_created_at"
+    t.integer  "sign_in_count",                                  default: 0,  null: false
+    t.datetime "current_sign_in_at"
+    t.datetime "last_sign_in_at"
+    t.string   "current_sign_in_ip"
+    t.string   "last_sign_in_ip"
+    t.decimal  "total",                  precision: 8, scale: 2
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "donors", ["email"], name: "index_donors_on_email", unique: true, using: :btree
+  add_index "donors", ["reset_password_token"], name: "index_donors_on_reset_password_token", unique: true, using: :btree
 
   create_table "goals", force: true do |t|
     t.string   "title"
@@ -40,6 +82,26 @@ ActiveRecord::Schema.define(version: 20140531205928) do
     t.datetime "updated_at"
   end
 
+  create_table "partners", force: true do |t|
+    t.string   "email",                  default: "", null: false
+    t.string   "encrypted_password",     default: "", null: false
+    t.string   "reset_password_token"
+    t.datetime "reset_password_sent_at"
+    t.datetime "remember_created_at"
+    t.integer  "sign_in_count",          default: 0,  null: false
+    t.datetime "current_sign_in_at"
+    t.datetime "last_sign_in_at"
+    t.string   "current_sign_in_ip"
+    t.string   "last_sign_in_ip"
+    t.text     "bio"
+    t.string   "homepage"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "partners", ["email"], name: "index_partners_on_email", unique: true, using: :btree
+  add_index "partners", ["reset_password_token"], name: "index_partners_on_reset_password_token", unique: true, using: :btree
+
   create_table "updates", force: true do |t|
     t.text     "body"
     t.string   "title"
@@ -47,33 +109,5 @@ ActiveRecord::Schema.define(version: 20140531205928) do
     t.datetime "created_at"
     t.datetime "updated_at"
   end
-
-  create_table "users", force: true do |t|
-    t.string   "email",                                          default: "", null: false
-    t.string   "encrypted_password",                             default: "", null: false
-    t.string   "reset_password_token"
-    t.datetime "reset_password_sent_at"
-    t.datetime "remember_created_at"
-    t.integer  "sign_in_count",                                  default: 0,  null: false
-    t.datetime "current_sign_in_at"
-    t.datetime "last_sign_in_at"
-    t.string   "current_sign_in_ip"
-    t.string   "last_sign_in_ip"
-    t.string   "type"
-    t.integer  "partner_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.string   "full_name"
-    t.string   "nickname"
-    t.string   "photo"
-    t.text     "bio"
-    t.string   "video"
-    t.decimal  "balance",                precision: 8, scale: 2
-    t.decimal  "total",                  precision: 8, scale: 2
-    t.string   "homepage"
-  end
-
-  add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
-  add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
 
 end
