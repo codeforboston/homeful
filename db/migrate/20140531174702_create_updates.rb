@@ -4,7 +4,7 @@ class CreateUpdates < ActiveRecord::Migration
       t.text :body
       t.string :title
 
-      t.belongs :client
+      t.belongs_to :client
       t.timestamps
     end
   end
