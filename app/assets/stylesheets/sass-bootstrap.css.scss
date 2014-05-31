@@ -4727,6 +4727,7 @@ input[type="button"].btn-block {
   min-height: 50px;
   margin-bottom: 20px;
   border: 1px solid transparent;
+  line-height: 42px;
 }
 /* line 21, ../../sass/_mixins.scss */
 .navbar:before, .navbar:after {
@@ -4883,6 +4884,7 @@ input[type="button"].btn-block {
   padding: 15px 15px;
   font-size: 18px;
   line-height: 20px;
+  position: absolute;
 }
 /* line 159, ../../sass/_navbar.scss */
 .navbar-brand:hover, .navbar-brand:focus {
@@ -7783,4 +7785,47 @@ td.visible-print {
   td.hidden-print {
     display: none !important;
   }
+}
+
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+  /* Margin bottom by footer height */
+    margin-bottom: 60px;
+}
+
+#footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+  /* Set the fixed height of the footer here */
+    height: 60px;
+    background-color: #f5f5f5;
+}
+
+
+/* Custom page CSS
+-------------------------------------------------- */
+/* Not required for template or sticky footer method. */
+
+body > .container {
+    padding: 30px 15px 0;
+}
+
+.container .text-muted {
+    margin: 20px 0;
+}
+
+#footer > .container {
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+code {
+    font-size: 80%;
 }
