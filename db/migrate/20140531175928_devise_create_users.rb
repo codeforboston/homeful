@@ -31,6 +31,7 @@ class DeviseCreateUsers < ActiveRecord::Migration
       # t.datetime :locked_at
 
       t.string :type
+      t.belongs_to :partner
       t.timestamps
     end
 
