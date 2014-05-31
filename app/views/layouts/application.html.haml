@@ -7,6 +7,7 @@
   = csrf_meta_tags
 
   %body.container
+<<<<<<< HEAD
     %nav{:class => "navbar navbar-default", :role =>"navigation"}
       %div{:class => "container-fluid"}
         %div{:class => "navbar-header"}
@@ -28,6 +29,20 @@
               =link_to 'Sign Up', new_user_registration_path
             %li
               =link_to 'Log In', new_user_session_path
+=======
+    %nav{:id => "top-nav"}
+      %ul
+        %li
+          =link_to 'Home', root_path
+        %li
+          =link_to 'Search', search_path
+        %li
+          =link_to 'About', about_path
+        %li
+          =link_to 'Sign Up', new_user_registration_path
+        %li
+          =link_to 'Log In', new_user_session_path
+>>>>>>> 5e4c959a8f4e5cfdf146f937465508307eb79817
     %main
     = yield
     %footer
