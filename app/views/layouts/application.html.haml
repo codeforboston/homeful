@@ -7,43 +7,30 @@
   = csrf_meta_tags
 
   %body.container
-<<<<<<< HEAD
-    %nav{:class => "navbar navbar-default", :role =>"navigation"}
-      %div{:class => "container-fluid"}
-        %div{:class => "navbar-header"}
-          %button{:type => "button", :class => "navbar-toggle", "data-toggle" => "collapse", "data-target" => "navbar-collapse"}
-            %span{:class => "sr-only"}Toggle navigation
-            %span{:class => "icon-bar"}
-            %span{:class => "icon-bar"}
-            %span{:class => "icon-bar"}
-          %a{:class => "navbar-brand"}Jazz Hands
-        %div{:class => "collapse navbar-collapse", :id => "navbar-collapse"}
-          %ul{:class => "nav navbar-nav"}
-            %li
-              =link_to 'Home', static_pages_home_path
-            %li
-              =link_to 'Search', static_pages_search_path
-            %li
-              =link_to 'About', static_pages_about_path
-            %li
-              =link_to 'Sign Up', new_user_registration_path
-            %li
-              =link_to 'Log In', new_user_session_path
-=======
-    %nav{:id => "top-nav"}
-      %ul
-        %li
-          =link_to 'Home', root_path
-        %li
-          =link_to 'Search', search_path
-        %li
-          =link_to 'About', about_path
-        %li
-          =link_to 'Sign Up', new_user_registration_path
-        %li
-          =link_to 'Log In', new_user_session_path
->>>>>>> 5e4c959a8f4e5cfdf146f937465508307eb79817
-    %main
-    = yield
+
+    %header
+      %nav{:class => "navbar navbar-default", :role =>"navigation"}
+        %div{:class => "container-fluid"}
+          %div{:class => "navbar-header"}
+            %button{:type => "button", :class => "navbar-toggle", "data-toggle" => "collapse", "data-target" => "navbar-collapse"}
+              %span{:class => "sr-only"}Toggle navigation
+              %span{:class => "icon-bar"}
+              %span{:class => "icon-bar"}
+              %span{:class => "icon-bar"}
+            %a{:class => "navbar-brand"}Jazz Hands
+          %div{:class => "collapse navbar-collapse", :id => "navbar-collapse"}
+            %ul{:class => "nav navbar-nav"}
+              %li
+                =link_to 'Home', root_path
+              %li
+                =link_to 'Search', search_path
+              %li
+                =link_to 'About', about_path
+              %li
+                =link_to 'Sign Up', new_user_registration_path
+              %li
+                =link_to 'Log In', new_user_session_path
+    %section.main
+      = yield
     %footer
       %p All rights reserved Jazz Hands. w00t!
