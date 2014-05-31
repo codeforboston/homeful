@@ -1,0 +1,2 @@
+class Partner < User
+end
