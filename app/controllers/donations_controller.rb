@@ -1,5 +1,9 @@
 class DonationsController < ApplicationController
 
+  def index
+    @donations = Donation.find_by_user_id params[:user_id]
+  end
+
   def new
     @donation = Donation.new
   end
