@@ -1,5 +1,16 @@
 source 'https://rubygems.org'
 
+
+group :test, :development do
+  gem 'rspec-rails'
+  gem 'factory_girl'
+  gem 'pry-rails'
+end
+
+group :test do
+  gem 'shoulda-matchers'
+end
+
 gem 'devise'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.1'
