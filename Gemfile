@@ -13,6 +13,12 @@ gem 'sass-rails', '~> 4.0.3'
 gem 'uglifier', '>= 1.3.0'
 # Use CoffeeScript for .js.coffee assets and views
 gem 'coffee-rails', '~> 4.0.0'
+
+# Use Stripe to process payments
+gem 'stripe', git: 'https://github.com/stripe/stripe-ruby'
+# Use Foreman to run the server, so we can access the .env file
+gem 'foreman'
+
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 # gem 'therubyracer',        platforms: :ruby
 
