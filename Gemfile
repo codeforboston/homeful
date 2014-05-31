@@ -20,6 +20,10 @@ gem 'pg'
 gem 'haml'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.3'
+#Use bootstrap with sass
+gem 'bootstrap-sass'
+#Use bootstrap nav-bar creation
+gem 'rails_bootstrap_navbar'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 # Use CoffeeScript for .js.coffee assets and views
