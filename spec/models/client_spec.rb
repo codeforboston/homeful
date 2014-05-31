@@ -6,5 +6,6 @@ describe Client do
     it {should have_many :updates}
     it {should have_many :goals}
     it {should have_many(:donations).through(:goals)}
+    it {should have_many(:donors).through(:donations)}
   end
 end
