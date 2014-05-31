@@ -1,10 +1,25 @@
-!!!
-%html>
+<!DOCTYPE html>
+%html
   %head
-    %title JazzHands
-    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
-    = javascript_include_tag 'application', 'data-turbolinks-track' => true
-    = csrf_meta_tags
+  %title Jazz Hands
+  = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true
+  / = javascript_include_tag 'application', 'data-turbolinks-track' => true
+  = csrf_meta_tags
 
-  %body
+  %body.container
+    %nav{:id => "top-nav"}
+      %ul
+        %li
+          =link_to 'Home', static_pages_home_path
+        %li
+          =link_to 'Search', static_pages_search_path
+        %li
+          =link_to 'About', static_pages_about_path
+        %li
+          =link_to 'Sign Up', new_user_registration_path
+        %li
+          =link_to 'Log In', new_user_session_path
+    %main
     = yield
+    %footer
+      %p All rights reserved Jazz Hands. w00t!
