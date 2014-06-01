@@ -9,7 +9,7 @@ class Client < User
   end
 
   alias_attribute :name, :nickname
-  
+
   def to_s
     name
   end

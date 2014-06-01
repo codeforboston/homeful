@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   resources :clients do
     resources :goals
   end
-  
+
   resources :donations
   resources :donors
   resources :partners
@@ -22,7 +22,6 @@ Rails.application.routes.draw do
   get 'thank_you' => 'static_pages#thank_you', as: :thank_you
 
   # You can have the root of your site routed with "root"
-  root 'static_pages#home'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
