@@ -10,10 +10,10 @@
 // Read Sprockets README (https://github.com/sstephenson/sprockets#sprockets-directives) for details
 // about supported directives.
 //
-= require coffeescript
-= require coffeescript_ujs
-= require turbolinks
-= require_tree .
-= require jquery.min
-= require jquery_ujs
-= require sass-bootstrap
+// require coffeescript
+// require coffeescript_ujs
+//= require turbolinks
+//= require jquery
+//= require jquery_ujs
+//= require sass-bootstrap
+//= require_tree .
