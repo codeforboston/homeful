@@ -6,6 +6,7 @@ Rails.application.routes.draw do
 
   get 'static_pages/search'
 
+
   devise_for :users
 
   resources :clients
@@ -20,6 +21,7 @@ Rails.application.routes.draw do
 
   get 'about' => 'static_pages#home', as: :about
   get 'search' => 'static_pages#search', as: :search
+  get 'thank_you' => 'static_pages#thank_you', as: :thank_you
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
