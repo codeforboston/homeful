@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
 
   devise_for :users
+  devise_for :clients, :class_name => 'Client', :controllers => { :registrations => "clients/registrations" }
 
   resources :clients do
     resources :goals

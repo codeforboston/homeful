@@ -107,6 +107,7 @@ ActiveRecord::Schema.define(version: 20140601005951) do
     t.string   "current_sign_in_ip"
     t.string   "last_sign_in_ip"
     t.text     "bio"
+    t.string   "nickname"
     t.string   "homepage"
     t.datetime "created_at"
     t.datetime "updated_at"
