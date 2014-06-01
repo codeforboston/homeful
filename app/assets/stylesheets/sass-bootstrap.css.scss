@@ -7787,6 +7787,8 @@ td.visible-print {
   }
 }
 
+@import url(http://fonts.googleapis.com/css?family=Lato:400,700,400italic|Montserrat:400,700);
+
 /* Sticky footer styles
 -------------------------------------------------- */
 html {
@@ -7797,6 +7799,13 @@ html {
 body {
   /* Margin bottom by footer height */
     margin-bottom: 60px;
+    font-family: 'Lato', sans-serif;
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: 'Montserrat', sans-serif;
+  text-transform: uppercase;
+  font-weight: 700;
 }
 
 #footer {
@@ -7805,8 +7814,10 @@ body {
     width: 100%;
   /* Set the fixed height of the footer here */
     height: 60px;
-    background-color: #f5f5f5;
+    border-top: 1px solid #E7E7E7;
+    background-color: #ffffff;
 }
+
 
 
 /* Custom page CSS
@@ -7828,4 +7839,12 @@ body > .container {
 
 code {
     font-size: 80%;
+}
+
+.navbar-default {
+  background-color: #ffffff;
+}
+
+.navbar li {
+  font-weight: 700;
 }
