@@ -1,37 +1,37 @@
-%header
-  %hgroup
-    %h1 Jazz Hands
-    %h2 Neighbors helping neighbors
-
-.flexslider.featured
-  %ul.slides
-    %li
-      %h3 John
-      = image_tag("face1.png")
-      %p 
-        Inspect anything brought into the house chase mice. Sweet beast find something else more interesting. Find something else more interesting hide when guests come over, and stick butt in face sleep on keyboard run in circles so give attitude so hopped up on goofballs.
-      %a.btn.btn-primary(href="#") 
-        Donate to John
-    %li
-      %h3 Jane
-      = image_tag("face2.png")
-      %p
-        Climb leg sun bathe, yet intently stare at the same spot so give attitude sleep on keyboard or inspect anything brought into the house under the bed
-      %a.btn.btn-primary(href="#") 
-        Donate to Jane
-    %li
-      %h3 Jim
-      = image_tag("face3.png")
-      %p
-        Run in circles lick butt. Use lap as chair leave hair everywhere intently sniff hand stretch, or find something else more interesting. Intrigued by the shower inspect anything brought into the house mark territory.
-      %a.btn.btn-primary(href="#") 
-        Donate to Jim
-
-.about    
-  Jazz Hands provides an easy, secure way to donate to homeless, home insecure, and distressed individuals. We partner with local shelters, outreach, and housing programs to ensure that your donations do the most good, helping to lift people out of homelessness and poverty.
-
-.discover
-  %a.btn.btn-info(href="#")
-    Find people that need your help
+.row
+  .col-md-8
+    %header
+    %hgroup
+      %h1 Jazz Hands
+      %h2 Neighbors helping neighbors
+    .about
+      Jazz Hands provides an easy, secure way to donate to homeless, home insecure, and distressed individuals. We partner with local shelters, outreach, and housing programs to ensure that your donations do the most good, helping to lift people out of homelessness and poverty.
+    .discover
+      %a.btn.btn-info(href="#")
+        Find people that need your help
+  .col-md-4
+    .flexslider.featured
+      %ul.slides
+        %li
+          %h3 John
+          = image_tag "face1.png", :class => "img-responsive"
+          %p
+            Inspect anything brought into the house chase mice. Sweet beast find something else more interesting. Find something else more interesting hide when guests come over, and stick butt in face sleep on keyboard run in circles so give attitude so hopped up on goofballs.
+          %a.btn.btn-primary(href="#")
+            Donate to John
+        %li
+          %h3 Jane
+          = image_tag "face2.png", :class => "img-responsive"
+          %p
+            Climb leg sun bathe, yet intently stare at the same spot so give attitude sleep on keyboard or inspect anything brought into the house under the bed
+          %a.btn.btn-primary(href="#")
+            Donate to Jane
+        %li
+          %h3 Jim
+          = image_tag "face3.png", :class => "img-responsive"
+          %p
+            Run in circles lick butt. Use lap as chair leave hair everywhere intently sniff hand stretch, or find something else more interesting. Intrigued by the shower inspect anything brought into the house mark territory.
+          %a.btn.btn-primary(href="#")
+            Donate to Jim
 
 = javascript_include_tag "home"
