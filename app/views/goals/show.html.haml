@@ -1,0 +1,19 @@
+%h1 #{@goal} for #{@goal.client}
+
+%p #{@goal.description}
+
+%div.progress-success{width: 500, height: 100}
+%div.progress-blank{width: 500, height: 100}
+
+%p Why
+
+%p How
+
+= form_tag donations_path do
+  %article
+    %label.amount
+      %span
+        Amount:
+        %input#amount{value: '25'}
+
+  %script.stripe-button{src: 'https://checkout.stripe.com/checkout.js', data: { key: Rails.configuration.stripe[:publishable_key], description: "Donate $25 to #{@goal.client}", amount: "2500" }}

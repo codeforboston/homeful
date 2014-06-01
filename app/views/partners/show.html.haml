@@ -1,3 +1,62 @@
-%h1 Partners#show
+%h1.text-center
+  Partner Profile:
+  = @partner.name
+.row.text-center
+  .col-md-3
+  .col-md-6
+    = image_tag @partner.photo, :class => "img-responsive img-center img-circle"
+  .col-md-3
+.row
+  .col-md-3
+  .col-md-6
+    %p
+      = @partner.bio
+    %a.btn.btn-info.center-block
+      Visit Website
+  .col-md-3
+.row
+  .col-md-12.text-center
+    %h2
+      Total Raised: $1,000,000.21
+.row
+  .col-md-3
+  .col-md-6
+    %h4 Staff:
+    .row
+      .col-md-6
+        %ul
+          %li Steve Mann
+          %li Josh Guy
+          %li Sarah Thisperson
+          %li Julie Personperson
+      .col-md-6
+        %ul
+          %li Alison George
+          %li Joe Shmoe
+          %li Bertha Thisperson
+          %li Heather Personperson
+  .col-md-3
+.row
+  %h4.text-center
+    %em
+      = @partner.name
+      Works With:
+  .col-md-3
+    = image_tag "face1.png", :class => "img-responsive img-thumbnail"
+  .col-md-3
+    = image_tag "face2.png", :class => "img-responsive img-thumbnail"
+  .col-md-3
+    = image_tag "face3.png", :class => "img-responsive img-thumbnail"
+  .col-md-3
+    = image_tag "face1.png", :class => "img-responsive img-thumbnail"
+.row
+  .col-md-3
+    = image_tag "face2.png", :class => "img-responsive img-thumbnail"
+  .col-md-3
+    = image_tag "face3.png", :class => "img-responsive img-thumbnail"
+  .col-md-3
+    = image_tag "face2.png", :class => "img-responsive img-thumbnail"
+  .col-md-3
+    = image_tag "face2.png", :class => "img-responsive img-thumbnail"
 
-%p Find me in app/views/partners/show.html.erb
+
