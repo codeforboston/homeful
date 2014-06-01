@@ -1,10 +1,41 @@
-!!!
-%html>
+<!DOCTYPE html>
+%html
   %head
-    %title JazzHands
-    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
+    %title Jazz Hands
+    = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true
     = javascript_include_tag 'application', 'data-turbolinks-track' => true
     = csrf_meta_tags
-
   %body
-    = yield
+    %div.container
+      %div.header
+        %nav{:class => "navbar navbar-default navbar-fixed-top", :role =>"navigation"}
+          %div{:class => "container"}
+            %div{:class => "navbar-header"}
+              %button{:type => "button", :class => "navbar-toggle", "data-toggle" => "collapse", "data-target" => ".navbar-collapse"}
+                %span{:class => "sr-only"}Toggle navigation
+                %span{:class => "icon-bar"}
+                %span{:class => "icon-bar"}
+                %span{:class => "icon-bar"}
+              = link_to image_tag('logo.png'), root_path, :class => "navbar-brand"
+            %div{:class => "collapse navbar-collapse", :id => "navbar-collapse1"}
+              %ul{:class => "nav navbar-nav pull-right"}
+                %li
+                  =link_to 'Home', root_path
+                %li
+                  =link_to 'Search', search_path
+                %li
+                  =link_to 'About', about_path
+                %li
+                  =link_to 'Sign Up', new_user_registration_path
+                %li
+                  =link_to 'Log In', new_user_session_path
+    %section.main.container
+      %div.jumbotron
+        %h1
+          %em Welcome
+          to Jazz Hands.
+      = yield
+    %footer#footer
+      %div.container
+        %p.text-muted All rights reserved Jazz Hands. w00t!
+
