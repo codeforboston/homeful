@@ -4,6 +4,10 @@ class Client < User
   has_many :donations, through: :goals
   has_many :donors,    through: :donations
 
+  def self.random
+    self.order("RANDOM()").first
+  end
+
   def active_goal
     goals.where(status: 'active').last || 0
   end
