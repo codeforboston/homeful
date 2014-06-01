@@ -63,7 +63,6 @@ namespace :db do
 
   desc "Fill database with sample goals for clients"
   task sample_goals: :environment do
-    
 
     goals = [ {
       title: 'Orthotics',
@@ -124,8 +123,54 @@ namespace :db do
       @g.client      = Client.all[ goal[:client_id] ]
       @g.save
     end
-
   end
+
+
+  desc "Fill database with sample goals for clients"
+  task sample_updates: :environment do
+    updates = [
+      {
+        body: "I want to let everyone know that I successfully raised $50 for an insulated sleeping pad. Thank you so much!",
+        title: "Sleeping Pad Goal",
+        client_id: 1
+      },
+      {
+        body: "Just wanted to say how appreciative my family and I are for all the progress we've made towards our goal thus far. We can't express enough gratitude.",
+        title: "Gratitude",
+        client_id: 2
+      },
+      {
+        body: "I was able to raise money to get a check-up at the dentist (thank you all)! The doctor told me I have a cavity and I need to get it filled or I will lose the tooth.",
+        title: "Dentist Visit",
+        client_id: 3
+      },
+      {
+        body: "I just created a new goal with the intent of getting my cavity filled.",
+        title: "Update on Dental Work",
+        client_id: 3
+      },
+      {
+        body: "Hello everybody, I am very thankful for you supporting me. It is very difficult for me to find food I can eat right now without teeth, so I'm creating a goal to purchase dentures.",
+        title: "Dentures",
+        client_id: 6
+      },
+      {
+        body: "WOW! THANK YOU SO MUCH! We successfully raised the money for me to attend a semester at community college. I am currently enrolled and am loving it! I am learning so much and am so grateful to be able to have this experience. I wish to further my education next semester, so if you could donate to my current goal it would be much appreciated. Thank you again!",
+        title: "One Semester",
+        client_id: 7
+      }
+    ]
+
+    updates.each do |update|
+      @u = Update.new
+      @u.body   = update[:body]
+      @u.title  = update[:title]
+      @u.client = Client.all[ update[:client_id] ]
+
+      @u.save
+    end
+  end
+
 
 
 end
