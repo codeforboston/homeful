@@ -2899,8 +2899,8 @@ input[type="button"].btn-block {
 
 @font-face {
   font-family: 'Glyphicons Halflings';
-  src: url("../fonts/glyphicons-halflings-regular.eot");
-  src: url("../fonts/glyphicons-halflings-regular.eot?#iefix") format("embedded-opentype"), url("../fonts/glyphicons-halflings-regular.woff") format("woff"), url("../fonts/glyphicons-halflings-regular.ttf") format("truetype"), url("../fonts/glyphicons-halflings-regular.svg#glyphicons-halflingsregular") format("svg");
+  src: url('/assets/glyphicons-halflings-regular.eot');
+  src: url('/assets/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'), url('/assets/glyphicons-halflings-regular.woff') format('woff'), url('/assets/glyphicons-halflings-regular.ttf') format('truetype'), url('/assets/glyphicons-halflings-regular.svg#glyphicons_halflingsregular') format('svg');
 }
 
 /* line 21, ../../sass/_glyphicons.scss */
@@ -7786,8 +7786,7 @@ td.visible-print {
     display: none !important;
   }
 }
-
-@import url(http://fonts.googleapis.com/css?family=Lato:400,700,400italic|Montserrat:400,700);
+@import url(http://fonts.googleapis.com/css?family=Lato:400,700,400italic|Aleo:400,700);
 
 /* Sticky footer styles
 -------------------------------------------------- */
@@ -7803,8 +7802,7 @@ body {
 }
 
 h1, h2, h3, h4, h5 {
-  font-family: 'Montserrat', sans-serif;
-  text-transform: uppercase;
+  font-family: 'Aleo', sans-serif;
   font-weight: 700;
 }
 
@@ -7817,8 +7815,6 @@ h1, h2, h3, h4, h5 {
     border-top: 1px solid #E7E7E7;
     background-color: #ffffff;
 }
-
-
 
 /* Custom page CSS
 -------------------------------------------------- */
@@ -7841,10 +7837,35 @@ code {
     font-size: 80%;
 }
 
-.navbar-default {
-  background-color: #ffffff;
-}
-
 .navbar li {
   font-weight: 700;
+}
+
+.btn-info {
+  background-color: #60bcb4;
+}
+
+.navbar-default {
+  background-color: rgba(255,253,244,.5);
+  border-bottom: none;
+}
+
+.jumbotron {
+  background: url(bricks.jpg) 40%;
+  padding: 90px 0 0 0;
+}
+
+.jumbotron h1 {
+    color: #275652;
+
+}
+
+body {
+  padding-top: 40px;
+  padding-bottom: 20px;
+}
+
+.btn, .btn-group-lg, .btn-lg, .btn-sm {
+  font-weight: 700;
+  border-radius: 0;
 }
