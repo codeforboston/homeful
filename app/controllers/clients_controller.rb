@@ -19,4 +19,9 @@ class ClientsController < ApplicationController
     @client = Client.find params[:id]
     # TODO: Updating Client
   end
+
+  private
+  def clients_params
+     params.require(:clients).permit(:email, :password, :photo, :bio, :video)
+  end
 end

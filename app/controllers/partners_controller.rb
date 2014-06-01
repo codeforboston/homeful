@@ -19,4 +19,9 @@ class PartnersController < ApplicationController
     @partner = Partner.find params[:id]
     # TODO: Update Partner
   end
+
+  private
+  def partner_params
+     params.require(:partner).permit(:email, :password, :photo, :bio, :homepage)
+  end
 end
