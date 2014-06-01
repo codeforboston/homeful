@@ -7846,7 +7846,7 @@ code {
 }
 
 .navbar-default {
-  background-color: rgba(255,253,244,.5);
+  background-color: rgb(255,253,244);
   border-bottom: none;
 }
 
@@ -7869,3 +7869,5 @@ body {
   font-weight: 700;
   border-radius: 0;
 }
+
+.img-center {margin:0 auto;}
