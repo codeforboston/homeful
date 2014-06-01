@@ -3,10 +3,8 @@ class Donor < User
   has_many :goals, through: :donations
   has_many :clients, through: :goals
 
-  def name
-    nickname
-  end
-
+  alias_attribute :name, :nickname
+  
   def to_s
     name
   end

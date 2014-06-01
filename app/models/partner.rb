@@ -1,9 +1,8 @@
 class Partner < User
   has_many :clients
 
-  def name
-    full_name
-  end
+  alias_attribute :name,        :full_name
+  alias_attribute :description, :bio
 
   def to_s
     name
