@@ -61,4 +61,71 @@ namespace :db do
   end
 
 
+  desc "Fill database with sample goals for clients"
+  task sample_goals: :environment do
+    
+
+    goals = [ {
+      title: 'Orthotics',
+      amount: 200.00,
+      description: "Raise $200 for custom orthotics so I can walk with less pain.",
+      client_id: 1,
+      status: 'active'
+    },
+    {
+      title: "Security Deposit and Last Month's Rent",
+      amount: 2000.00,
+      description: "Raise $2000 dollars for an apartment security deposit and last month's rent for my family and I.",
+      client_id: 2,
+      status: 'active'
+    },
+    {
+      title: 'Dentist Visit',
+      amount: 150.00,
+      description: "Raise $150 to go to the dentist for a painful cavity.",
+      client_id: 3,
+      status: 'active'
+    },
+    {
+      title: 'Utility Bill',
+      amount: 45.00,
+      description: "Needs $45 for this month's utility bill.",
+      client_id: 4,
+      status: 'active'
+    },
+    {
+      title: 'Essential Supplies',
+      amount: 50.00,
+      description: "Needs $50 for reading glasses and a raincoat.",
+      client_id: 5,
+      status: 'active'
+    },
+    {
+      title: 'Dentures',
+      amount: 500.00,
+      description: "Raise $500 for dentures.",
+      client_id: 6,
+      status: 'active'
+    },
+    {
+      title: 'Tuition',
+      amount: 1337.00,
+      description: "Raise $1337 for one semester at community college.",
+      client_id: 7,
+      status: 'active'
+    } ]
+
+    goals.each do |goal|
+      @g             = Goal.new
+      @g.title       = goal[:title]
+      @g.amount      = goal[:amount]
+      @g.description = goal[:description]
+      @g.status      = goal[:status]
+      @g.client      = Client.all[ goal[:client_id] ]
+      @g.save
+    end
+
+  end
+
+
 end
