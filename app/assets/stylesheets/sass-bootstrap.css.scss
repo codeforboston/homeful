@@ -2899,8 +2899,8 @@ input[type="button"].btn-block {
 
 @font-face {
   font-family: 'Glyphicons Halflings';
-  src: url("../fonts/glyphicons-halflings-regular.eot");
-  src: url("../fonts/glyphicons-halflings-regular.eot?#iefix") format("embedded-opentype"), url("../fonts/glyphicons-halflings-regular.woff") format("woff"), url("../fonts/glyphicons-halflings-regular.ttf") format("truetype"), url("../fonts/glyphicons-halflings-regular.svg#glyphicons-halflingsregular") format("svg");
+  src: url('/assets/glyphicons-halflings-regular.eot');
+  src: url('/assets/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'), url('/assets/glyphicons-halflings-regular.woff') format('woff'), url('/assets/glyphicons-halflings-regular.ttf') format('truetype'), url('/assets/glyphicons-halflings-regular.svg#glyphicons_halflingsregular') format('svg');
 }
 
 /* line 21, ../../sass/_glyphicons.scss */
@@ -7786,7 +7786,6 @@ td.visible-print {
     display: none !important;
   }
 }
-
 @import url(http://fonts.googleapis.com/css?family=Lato:400,700,400italic|Aleo:400,700);
 
 /* Sticky footer styles
@@ -7804,9 +7803,6 @@ body {
 
 h1, h2, h3, h4, h5 {
   font-family: 'Aleo', sans-serif;
-}
-
-h2, h3, h4, h5 {
   font-weight: 700;
 }
 
@@ -7819,8 +7815,6 @@ h2, h3, h4, h5 {
     border-top: 1px solid #E7E7E7;
     background-color: #ffffff;
 }
-
-
 
 /* Custom page CSS
 -------------------------------------------------- */
