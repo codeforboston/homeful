@@ -1,3 +1,52 @@
-%h1 Partners#show
-
+%h1 Partner Profile: @partner.name
+.row
+  .col-md-3
+  .col-md-6
+    = image_tag "CodeForBoston.jpeg", :class => "img-responsive"
+  .col-md-3
+.row
+  .col-md-3
+  .col-md-6
+    %p @partner.bio
+    %a.btn.btn-info(href=@partner.homepage)
+      Visit Website
+  .col-md-3
+.row
+  .col-md-12
+    Total Raised: $1,000,000.21
+.row
+  .col-md-4
+    Staff:
+  .col-md-4
+    %ul
+      %li Steve Mann
+      %li Josh Guy
+      %li Sarah Thisperson
+      %li Julie Personperson
+  .col-md-4
+    %ul
+      %li Alison George
+      %li Joe Shmoe
+      %li Bertha Thisperson
+      %li Heather Personperson
+.row
+  %h2 @partner.name Works With:
+  .col-md-3
+    = image_tag @client.photo, :class => "img-responsive"
+  .col-md-3
+    = image_tag "face2.png", :class => "img-responsive"
+  .col-md-3
+    = image_tag "face3.png", :class => "img-responsive"
+  .col-md-3
+    = image_tag "face4.jpeg", :class => "img-responsive"
+.row
+  .col-md-3
+    = image_tag "face4.jpeg", :class => "img-responsive"
+  .col-md-3
+    = image_tag "face3.jpeg", :class => "img-responsive"
+  .col-md-3
+    = image_tag "face2.jpeg", :class => "img-responsive"
+  .col-md-3
+    = image_tag "face1.jpeg", :class => "img-responsive"
 %p Find me in app/views/partners/show.html.erb
+
