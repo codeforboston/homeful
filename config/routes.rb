@@ -19,7 +19,7 @@ Rails.application.routes.draw do
   # You can have the root of your site routed with "root"
   root 'static_pages#home'
 
-  get 'about' => 'static_pages#home', as: :about
+  get 'about' => 'static_pages#about', as: :about
   get 'search' => 'static_pages#search', as: :search
   get 'thank_you' => 'static_pages#thank_you', as: :thank_you
 
