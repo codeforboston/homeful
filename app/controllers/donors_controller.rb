@@ -18,4 +18,9 @@ class DonorsController < ApplicationController
     @donor = Donor.find params[:id]
     # TODO: Updating Donor
   end
+
+  private
+  def donor_params
+     params.require(:donor).permit(:email, :password, :photo)
+  end
 end

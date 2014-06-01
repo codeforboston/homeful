@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140531220815) do
+ActiveRecord::Schema.define(version: 20140601004339) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -33,6 +33,10 @@ ActiveRecord::Schema.define(version: 20140531220815) do
     t.integer  "partner_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "photo_file_name"
+    t.string   "photo_content_type"
+    t.integer  "photo_file_size"
+    t.datetime "photo_updated_at"
   end
 
   add_index "clients", ["email"], name: "index_clients_on_email", unique: true, using: :btree
@@ -60,6 +64,10 @@ ActiveRecord::Schema.define(version: 20140531220815) do
     t.decimal  "total",                  precision: 8, scale: 2
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "photo_file_name"
+    t.string   "photo_content_type"
+    t.integer  "photo_file_size"
+    t.datetime "photo_updated_at"
   end
 
   add_index "donors", ["email"], name: "index_donors_on_email", unique: true, using: :btree
@@ -96,6 +104,10 @@ ActiveRecord::Schema.define(version: 20140531220815) do
     t.string   "homepage"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "photo_file_name"
+    t.string   "photo_content_type"
+    t.integer  "photo_file_size"
+    t.datetime "photo_updated_at"
   end
 
   add_index "partners", ["email"], name: "index_partners_on_email", unique: true, using: :btree

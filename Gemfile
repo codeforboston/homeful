@@ -1,6 +1,7 @@
 source 'https://rubygems.org'
 
 
+
 group :test, :development do
   gem 'rspec-rails'
   gem 'factory_girl'
@@ -11,6 +12,7 @@ group :test do
   gem 'shoulda-matchers'
 end
 
+gem 'paperclip', github: 'thoughtbot/paperclip'
 gem 'devise'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.1'
