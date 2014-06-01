@@ -169,8 +169,8 @@ DEPENDENCIES
   pg
   pry-rails
   rails (= 4.1.1)
-  rspec-rails
   rails_bootstrap_navbar
+  rspec-rails
   sass-rails (~> 4.0.3)
   sdoc (~> 0.4.0)
   shoulda-matchers

@@ -1,2 +1,19 @@
-<h1>Clients#show</h1>
-<p>Find me in app/views/clients/show.html.erb</p>
+.row
+  .col-md-4
+    .client-photo
+      =@client.photo
+    .donation-bar
+      /insert donation progress bar here
+  .col-md-8
+    %h1= @client
+    %p = @client.bio
+.row
+  .updates-section
+    %h1 UPDATES
+    / create new update
+    %ul.updates-list
+    - @client.updates.each do |update|
+      %li
+        %h3= update.title
+        %p= update.body
+        %p= update.created_at
