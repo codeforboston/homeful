@@ -33,6 +33,9 @@ ActiveRecord::Schema.define(version: 20140601005951) do
     t.integer  "partner_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "full_name"
+    t.string   "nickname"
+    t.string   "photo"
   end
 
   add_index "clients", ["email"], name: "index_clients_on_email", unique: true, using: :btree
@@ -60,6 +63,10 @@ ActiveRecord::Schema.define(version: 20140601005951) do
     t.decimal  "total",                  precision: 8, scale: 2
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.text     "bio"
+    t.string   "full_name"
+    t.string   "nickname"
+    t.string   "photo"
   end
 
   add_index "donors", ["email"], name: "index_donors_on_email", unique: true, using: :btree
@@ -103,6 +110,8 @@ ActiveRecord::Schema.define(version: 20140601005951) do
     t.string   "homepage"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "full_name"
+    t.string   "photo"
   end
 
   add_index "partners", ["email"], name: "index_partners_on_email", unique: true, using: :btree
