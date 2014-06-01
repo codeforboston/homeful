@@ -4,10 +4,8 @@ class Client < User
   has_many :donations, through: :goals
   has_many :donors,    through: :donations
 
-  def name
-    nickname
-  end
-
+  alias_attribute :name, :nickname
+  
   def to_s
     name
   end
