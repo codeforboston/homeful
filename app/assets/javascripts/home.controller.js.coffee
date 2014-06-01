@@ -1,0 +1,2 @@
+($ window).load ->
+  ($ '.flexslider').flexslider()
