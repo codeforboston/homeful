@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140531220815) do
+ActiveRecord::Schema.define(version: 20140601005951) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -72,11 +72,18 @@ ActiveRecord::Schema.define(version: 20140531220815) do
     t.integer  "client_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "status",      default: "active"
   end
+
+  create_table "goals_needs", id: false, force: true do |t|
+    t.integer "goal_id"
+    t.integer "need_id"
+  end
+
+  add_index "goals_needs", ["goal_id", "need_id"], name: "index_goals_needs_on_goal_id_and_need_id", using: :btree
 
   create_table "needs", force: true do |t|
     t.string   "title"
-    t.integer  "client_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
