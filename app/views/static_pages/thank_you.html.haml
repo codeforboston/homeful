@@ -1,0 +1,14 @@
+%h2 Thank you!
+%p Thank you for your contribution to this goal, and be sure to check in often for updates. Sharing this goal with your friends can greatly improve the chances of it's success!
+Share on Twitter or Facebook:
+%br
+
+%a.twitter-share-button.left{"data-count" => "horizontal", "data-via" => "fuonrails", :href => "http://twitter.com/share"} Tweet
+%script{:src => "http://platform.twitter.com/widgets.js", :type => "text/javascript"}
+.fshare.left{:style => 'padding-left: 0px; margin-left: 10px;'}
+%script{:src => "http://connect.facebook.net/en_US/all.js#xfbml=1"}
+%fb:like{:layout => "button_count", :show_faces => "false", :width => "450"}
+
+%br
+%br
+=link_to 'Back to Your Profile', donor_path(1)
