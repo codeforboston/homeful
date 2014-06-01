@@ -3,14 +3,14 @@
 = form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| 
   = devise_error_messages! 
 
-  %div
+  %div.form-group
     = f.label :email 
-    = f.email_field :email, autofocus: true 
+    = f.email_field :email, autofocus: true, :class => 'form-control'
 
-  %div
+  %div.form-group
     = f.label :password
-    = f.password_field :password, autocomplete: "off"
+    = f.password_field :password, autocomplete: "off", :class => 'form-control'
 
-  %div= f.submit "Sign up"
+  %div= f.submit "Sign up", :class => 'btn btn-primary'
 
 = render "clients/shared/links"

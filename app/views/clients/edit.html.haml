@@ -2,25 +2,25 @@
 
 = form_for @client, url: {action: "update"} do |f|
   %h2 Name
-  %label
-    Full Name
-    = f.text_field :full_name, :required => true
-  %p.details.small
-    Your full name will not be made public.
+  .form-group
+    %label Full Name
+    = f.text_field :full_name, :required => true, :class => 'form-control'
+    %p.help-block
+      Your full name will not be made public.
 
-  %label
-    Preferred name
-    = f.text_field :nickname
-  %p.details.small
-    <strong>Required</strong> Enter a nickname if you want. If you don't enter a preferred name, we'll display your first name instead.
+  .form-group
+    %label Preferred name
+    = f.text_field :nickname, :class => 'form-control'
+    %p.help-block
+      <strong>Required</strong> Enter a nickname if you want. If you don't enter a preferred name, we'll display your first name instead.
 
   %h2 Tell us about yourself
-  %label
-    Photo
-    = f.file_field :photo
+  .form-group
+    %label Photo
+    = f.file_field :photo, :class => 'form-control'
   
-  %label
-    Bio
-    %textarea
+  .form-group
+    %label Bio
+    %textarea.form-control
 
-  = f.submit "Save your profile"
+  = f.submit "Save your profile", :class =>'btn btn-primary'
