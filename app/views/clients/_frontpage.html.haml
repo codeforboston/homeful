@@ -1,0 +1,8 @@
+%li
+  %h3 #{client}
+  =image_tag "#{client.photo}", id: "client-photo"
+  %p
+    %em= client.bio
+  =link_to "Meet #{client}", client_path(client), class: "a btn btn-info pull-right"
+  %br
+  %br

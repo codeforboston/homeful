@@ -8,6 +8,10 @@ class Client < User
     self.order("RANDOM()").first
   end
 
+  def self.frontpage
+    self.order("RANDOM()")[0..2]
+  end
+
   def active_goal
     goals.where(status: 'active').last || 0
   end
