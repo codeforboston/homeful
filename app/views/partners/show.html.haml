@@ -11,8 +11,8 @@
   .col-md-6
     %p
       = @partner.bio
-    %a.btn.btn-info.center-block
-      Visit Website
+    .btn.btn-info.center-block
+      =link_to 'Visit Website', 'http://' + @partner.homepage, :target => "_blank"
   .col-md-3
 .row
   .col-md-12.text-center
