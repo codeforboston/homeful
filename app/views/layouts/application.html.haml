@@ -37,6 +37,12 @@
       = yield
     %footer#footer
       %div.container
-        %p.text-muted.text-center All rights reserved Jazz Hands. w00t!
-
-
+        %p.text-muted 
+          All rights reserved Jazz Hands. w00t!
+          - if client_signed_in?
+            = link_to 'Client sign out', destroy_client_session_path, :method => 'delete', :class => 'pull-right'
+          - else
+            = link_to 'Client registration', new_client_registration_path, :class => 'pull-right'
+            = link_to 'Client sign in', new_client_session_path, :class => 'pull-right'
+          %a.pull-right(href="#")
+            Partner sign in

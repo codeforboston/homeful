@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   get 'static_pages/search'
 
   devise_for :users
+  devise_for :clients, :class_name => 'Client', :controllers => { :registrations => "clients/registrations" }
 
   resources :clients
   resources :donors

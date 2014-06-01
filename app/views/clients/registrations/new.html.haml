@@ -1,0 +1,16 @@
+%h2 Client Sign up
+
+= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| 
+  = devise_error_messages! 
+
+  %div
+    = f.label :email 
+    = f.email_field :email, autofocus: true 
+
+  %div
+    = f.label :password
+    = f.password_field :password, autocomplete: "off"
+
+  %div= f.submit "Sign up"
+
+= render "clients/shared/links"
