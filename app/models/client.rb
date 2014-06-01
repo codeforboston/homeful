@@ -4,6 +4,10 @@ class Client < User
   has_many :donations, through: :goals
   has_many :donors,    through: :donations
 
+  def active_goal
+    goals.where(status: 'active').last
+  end
+
   alias_attribute :name, :nickname
   
   def to_s
