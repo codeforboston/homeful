@@ -11,7 +11,7 @@
         %nav{:class => "navbar navbar-default navbar-fixed-top", :role =>"navigation"}
           %div{:class => "container"}
             %div{:class => "navbar-header"}
-              %button{:type => "button", :class => "navbar-toggle", "data-toggle" => "collapse", "data-target" => "navbar-collapse1"}
+              %button{:type => "button", :class => "navbar-toggle", "data-toggle" => "collapse", "data-target" => ".navbar-collapse"}
                 %span{:class => "sr-only"}Toggle navigation
                 %span{:class => "icon-bar"}
                 %span{:class => "icon-bar"}
@@ -30,7 +30,12 @@
                 %li
                   =link_to 'Log In', new_user_session_path
     %section.main.container
+      %div.jumbotron
+        %h1
+          %em Welcome
+          to Jazz Hands.
       = yield
     %footer#footer
       %div.container
         %p.text-muted All rights reserved Jazz Hands. w00t!
+
