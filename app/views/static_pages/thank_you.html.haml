@@ -11,4 +11,6 @@ Share on Twitter or Facebook:
 
 %br
 %br
-=link_to 'Back to Your Profile', donor_path(1)
+=link_to 'Back to Your Profile', donor_path(Donor.first)
+|
+=link_to 'Donate to someone else', client_path(Client.random)

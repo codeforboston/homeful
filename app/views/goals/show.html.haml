@@ -16,4 +16,4 @@
         Amount:
         %input#amount{value: '25'}
 
-  %script.stripe-button{src: 'https://checkout.stripe.com/checkout.js', data: { key: Rails.configuration.stripe[:publishable_key], description: "Donate $25 to #{@goal.client}", amount: "2500" }}
+  %script.stripe-button{src: 'https://checkout.stripe.com/checkout.js', data: { key: Rails.configuration.stripe[:publishable_key], description: "Donate $25 to #{@goal.client}", amount: "2500", email: Donor.first.email }}

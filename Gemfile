@@ -11,6 +11,9 @@ group :test do
   gem 'shoulda-matchers'
 end
 
+# Use foreman to run server and set up test environment
+gem 'foreman'
+
 gem 'devise'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.1'
