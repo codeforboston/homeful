@@ -24,6 +24,8 @@ gem 'sass-rails', '~> 4.0.3'
 gem 'bootstrap-sass'
 #Use bootstrap nav-bar creation
 gem 'rails_bootstrap_navbar'
+# Use Stripe as payment processing
+gem 'stripe'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 # Use CoffeeScript for .js.coffee assets and views

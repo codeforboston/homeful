@@ -1,0 +1,9 @@
+%h1 Donate to @goal.title
+
+= form_tag donations_path do
+  %article
+    %label.amount
+      %span
+        Amount: $5.00
+
+  %script.stripe-button{src: 'https://checkout.stripe.com/checkout.js', data: { key: Rails.configuration.stripe[:publishable_key], description: "@donation.description", amount: "500" }}
