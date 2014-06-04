@@ -49,6 +49,13 @@ OR, if you don't like that, install [lunchy](https://github.com/eddiezane/lunchy
 * run `git remote add upstream https://github.com/codeforboston/jazz-hands`
 * To keep up to date, run `git fetch upstream` and rebase your branch
 
+###Contribution guide
+We work off of the `develop` branch. When you fork, branch off of `develop` and send a PR.
+Name your branches `<general type of update>/<specific thing it solves>`.
+Examples are:
+* `docs/update-license`
+* `fix/validate-user-login`
+* `feature/client-bio-pages`
 
 ##License
 Jazz Hands is provided under the MIT License
