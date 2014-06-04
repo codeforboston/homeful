@@ -1,7 +1,6 @@
 require 'csv'
 
 namespace :db do
-
   desc "Fill database with all sample users"
   task populate: :environment do
     `rake db:sample_clients`
@@ -11,7 +10,6 @@ namespace :db do
 
   desc "Fill database with sample clients from CSVs"
   task sample_clients: :environment do
-
     CSV.foreach("#{Rails.root}/db/fixtures/clients.csv", headers: true) do |r|
       @c = Client.find_by(full_name: r['full_name']) || Client.new
       @c.full_name = r['full_name']
@@ -59,6 +57,7 @@ namespace :db do
       @p.save
     end
   end
+
 
 
   desc "Fill database with sample goals for clients"
@@ -170,7 +169,5 @@ namespace :db do
       @u.save
     end
   end
-
-
 
 end
