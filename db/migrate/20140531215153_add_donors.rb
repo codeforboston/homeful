@@ -30,7 +30,16 @@ class AddDonors < ActiveRecord::Migration
       # t.string   :unlock_token # Only if unlock strategy is :email or :both
       # t.datetime :locked_at
 
-      ##Donor Attrs
+
+      ## User Attrs
+      
+      t.text    :bio
+      t.string  :full_name
+      t.string  :nickname
+      t.string  :photo
+
+
+      ## Donor Attrs
       t.decimal :total, precision: 8, scale: 2
 
       t.timestamps

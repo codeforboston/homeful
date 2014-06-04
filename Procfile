@@ -1,1 +1,1 @@
-web: rails s --env .env
+web: rails s -e .env

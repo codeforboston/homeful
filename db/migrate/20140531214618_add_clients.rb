@@ -29,10 +29,10 @@ class AddClients < ActiveRecord::Migration
       # t.integer  :failed_attempts, default: 0, null: false # Only if lock strategy is :failed_attempts
       # t.string   :unlock_token # Only if unlock strategy is :email or :both
       # t.datetime :locked_at
+      
+      ## Client Attrs
 
-      ##Client Attrs
-      t.text :bio
-      t.string :video
+      t.string  :video
       t.decimal :balance, precision: 8, scale: 2
 
       t.belongs_to :partner

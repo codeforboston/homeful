@@ -1,2 +1,22 @@
-<h1>Clients#show</h1>
-<p>Find me in app/views/clients/show.html.erb</p>
+.row
+  .col-md-4
+    .client-photo
+      =image_tag "#{@client.photo}", :id => "client-photo"
+    .donation-bar
+      /insert donation progress bar here
+      %button.btn.btn-success.donate-btn{:type => "button"}
+        =link_to 'Donate', client_goal_path(@client.id, @client.active_goal)
+  .col-md-8
+    .client-info
+      %h1= @client
+      %p= @client.bio
+.row
+  .updates-section
+    %h1 Updates
+    / create new update
+    %ul.updates-list
+      - @client.updates.each do |update|
+        %li
+          %h3= update.title
+          %p= update.body
+          %p= update.created_at.to_date.strftime('%m/%d/%Y')
